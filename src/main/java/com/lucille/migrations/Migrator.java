@@ -15,3 +15,4 @@ public class Migrator {
     }
 }
 
+// mvn package exec:java -Dexec.mainClass=com.lucille.migrations.Migrator
