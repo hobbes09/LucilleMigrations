@@ -1,0 +1,1 @@
+ALTER TABLE testtable DROP COLUMN metadata;
