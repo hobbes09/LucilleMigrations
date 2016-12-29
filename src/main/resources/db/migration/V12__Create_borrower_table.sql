@@ -1,0 +1,23 @@
+CREATE TABLE borrower(
+	id 				BIGSERIAL 			PRIMARY KEY,		
+	email 			CHAR(255) 			NOT NULL			UNIQUE,
+	mobile_contact		BIGINT			NOT NULL			UNIQUE,
+	aadhar_id		CHAR(255)			NOT NULL			UNIQUE,
+	title			CHAR(255)   		NOT NULL,
+	first_name 		CHAR(255) 			NOT NULL,
+	last_name		CHAR(255) 			NOT NULL,
+	password		CHAR(255) 			NOT NULL,
+	contact_info_id		BIGINT			NOT NULL 			UNIQUE,
+	bank_details_id		BIGINT			NOT NULL 			UNIQUE,
+	member_rating	CHAR(255),
+	current_employer	CHAR(255),
+	employment_status CHAR(255) 		NOT NULL, 
+	home_ownership	CHAR(255),
+	annual_income	INTEGER,
+	current_employment_date		DATE,
+	total_employment_length		INTEGER,
+	is_staff			BOOLEAN			NOT NULL			DEFAULT FALSE,
+	is_active			BOOLEAN			NOT	NULL			DEFAULT FALSE,
+	created_at			TIMESTAMP WITH TIME ZONE			NOT NULL	DEFAULT now(),
+	updated_at			TIMESTAMP WITH TIME ZONE			NOT NULL	DEFAULT now()
+);
